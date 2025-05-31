@@ -1,0 +1,44 @@
+/*!******************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[3]!./components/logos-scroll.module.css ***!
+  \******************************************************************************************************************************************************************************************************************************************************************************/
+.logos-scroll_wrapper__R__2O {
+  width: 90%;
+  max-width: 1536px;
+  margin-inline: auto;
+  position: relative;
+  height: 100px;
+  margin-top: 2rem;
+  overflow: hidden;
+  mask-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 1) 20%,
+    rgba(0, 0, 0, 1) 80%,
+    rgba(0, 0, 0, 0)
+  );
+}
+
+.logos-scroll_scroller__Zqp2s {
+  display: flex;
+  align-items: center;
+  height: 100px;
+  animation: logos-scroll_scrollLeftFlex__29Ohz 30s linear infinite;
+}
+
+@keyframes logos-scroll_scrollLeftFlex__29Ohz {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.logos-scroll_logoItem__QkXwA {
+  flex: 0 0 200px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
