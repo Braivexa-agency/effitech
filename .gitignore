@@ -1,3 +1,6 @@
+# Node modules
+node_modules
+
 # Logs
 logs
 *.log
@@ -7,20 +10,34 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-node_modules
+# Build output
+.next/
+out/
+dist/
+dist-ssr/
+
+# Test coverage
+coverage/
+
+# Local env files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Misc
 .DS_Store
-dist
-dist-ssr
-coverage
 *.local
 
-/cypress/videos/
-/cypress/screenshots/
+# Cypress (if used)
+cypress/videos/
+cypress/screenshots/
 
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
-.idea
+.idea/
 *.suo
 *.ntvs*
 *.njsproj
@@ -28,7 +45,17 @@ coverage
 *.sw?
 *.py
 
-.env
+# Lock files (if not using npm)
 package-lock.json
 
+# TypeScript
+*.tsbuildinfo
+
+# Next.js build manifest
+.next/
+
 components.d.ts
+
+# New line to ignore all files named 0.pack.gz
+*.pack.gz
+trace
