@@ -1,61 +1,69 @@
-"use client"
+"use client";
 
-import Link from "next/link"
-import { useState, useEffect } from "react"
-import { Button } from "@/components/ui/button"
-import { ChevronRight, Menu, X, Moon, Sun } from "lucide-react"
-import { useTheme } from "next-themes"
-import { motion } from "framer-motion"
+import Link from "next/link";
+import { useState, useEffect } from "react";
+import { Button } from "@/components/ui/button";
+import { ChevronRight, Menu, X, Moon, Sun } from "lucide-react";
+import { useTheme } from "next-themes";
+import { motion } from "framer-motion";
 
 const NAV_LINKS = [
   { label: "Features", href: "#features" },
   { label: "Testimonials", href: "#testimonials" },
   { label: "Pricing", href: "#pricing" },
   { label: "FAQ", href: "#faq" },
-]
+];
 
 export default function Header() {
-  const [isScrolled, setIsScrolled] = useState(false)
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-  const { theme, setTheme } = useTheme()
-  const [mounted, setMounted] = useState(false)
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const { theme, setTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    setMounted(true)
+    setMounted(true);
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10)
-    }
-    window.addEventListener("scroll", handleScroll)
-    return () => window.removeEventListener("scroll", handleScroll)
-  }, [])
+      setIsScrolled(window.scrollY > 10);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   // Smooth scroll with header offset
-  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+  const handleNavClick = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    href: string
+  ) => {
     if (href.startsWith("#")) {
-      e.preventDefault()
-      const el = document.querySelector(href)
+      e.preventDefault();
+      const el = document.querySelector(href);
       if (el) {
-        const header = document.querySelector("header")
-        const offset = header ? (header as HTMLElement).offsetHeight : 0
-        const top = (el as HTMLElement).getBoundingClientRect().top + window.scrollY - offset
-        window.scrollTo({ top, behavior: "smooth" })
-        setMobileMenuOpen(false)
+        const header = document.querySelector("header");
+        const offset = header ? (header as HTMLElement).offsetHeight : 0;
+        const top =
+          (el as HTMLElement).getBoundingClientRect().top +
+          window.scrollY -
+          offset;
+        window.scrollTo({ top, behavior: "smooth" });
+        setMobileMenuOpen(false);
       }
     }
-  }
+  };
 
-  const toggleTheme = () => setTheme(theme === "dark" ? "light" : "dark")
+  const toggleTheme = () => setTheme(theme === "dark" ? "light" : "dark");
 
   return (
     <header
-      className={`sticky top-0 z-50 w-full backdrop-blur-lg transition-all duration-300 ${isScrolled ? "bg-background/80 shadow-sm" : "bg-transparent"}`}
+      className={`sticky top-0 z-50 w-full backdrop-blur-lg transition-all duration-300 ${
+        isScrolled ? "bg-background/80 shadow-sm" : "bg-transparent"
+      }`}
     >
       <div className="container flex h-16 items-center justify-between">
         <div className="flex items-center gap-2 font-bold">
           <div className="size-8 rounded-lg bg-gradient-to-br from-primary to-primary/70 flex items-center justify-center text-primary-foreground">
-            S
+            E
           </div>
-          <span>SaaSify</span>
+          <span>EFFITECH</span>
         </div>
         <nav className="hidden md:flex gap-8">
           {NAV_LINKS.map((link) => (
@@ -63,34 +71,54 @@ export default function Header() {
               key={link.href}
               href={link.href}
               className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
-              onClick={e => handleNavClick(e, link.href)}
+              onClick={(e) => handleNavClick(e, link.href)}
             >
               {link.label}
             </Link>
           ))}
         </nav>
         <div className="hidden md:flex gap-4 items-center">
-          <Button variant="ghost" size="icon" onClick={toggleTheme} className="rounded-full">
-            {mounted && theme === "dark" ? <Sun className="size-[18px]" /> : <Moon className="size-[18px]" />}
+          <Button
+            variant="ghost"
+            size="icon"
+            onClick={toggleTheme}
+            className="rounded-full"
+          >
+            {mounted && theme === "dark" ? (
+              <Sun className="size-[18px]" />
+            ) : (
+              <Moon className="size-[18px]" />
+            )}
             <span className="sr-only">Toggle theme</span>
           </Button>
-          <Link
-            href="#"
-            className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
-          >
-            Log in
-          </Link>
           <Button className="rounded-full">
-            Get Started
+            Get In Touched
             <ChevronRight className="ml-1 size-4" />
           </Button>
         </div>
         <div className="flex items-center gap-4 md:hidden">
-          <Button variant="ghost" size="icon" onClick={toggleTheme} className="rounded-full">
-            {mounted && theme === "dark" ? <Sun className="size-[18px]" /> : <Moon className="size-[18px]" />}
+          <Button
+            variant="ghost"
+            size="icon"
+            onClick={toggleTheme}
+            className="rounded-full"
+          >
+            {mounted && theme === "dark" ? (
+              <Sun className="size-[18px]" />
+            ) : (
+              <Moon className="size-[18px]" />
+            )}
           </Button>
-          <Button variant="ghost" size="icon" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
-            {mobileMenuOpen ? <X className="size-5" /> : <Menu className="size-5" />}
+          <Button
+            variant="ghost"
+            size="icon"
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          >
+            {mobileMenuOpen ? (
+              <X className="size-5" />
+            ) : (
+              <Menu className="size-5" />
+            )}
             <span className="sr-only">Toggle menu</span>
           </Button>
         </div>
@@ -109,13 +137,17 @@ export default function Header() {
                 key={link.href}
                 href={link.href}
                 className="py-2 text-sm font-medium"
-                onClick={e => handleNavClick(e, link.href)}
+                onClick={(e) => handleNavClick(e, link.href)}
               >
                 {link.label}
               </Link>
             ))}
             <div className="flex flex-col gap-2 pt-2 border-t">
-              <Link href="#" className="py-2 text-sm font-medium" onClick={() => setMobileMenuOpen(false)}>
+              <Link
+                href="#"
+                className="py-2 text-sm font-medium"
+                onClick={() => setMobileMenuOpen(false)}
+              >
                 Log in
               </Link>
               <Button className="rounded-full">
@@ -127,5 +159,5 @@ export default function Header() {
         </motion.div>
       )}
     </header>
-  )
+  );
 }
