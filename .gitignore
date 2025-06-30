@@ -15,6 +15,7 @@ lerna-debug.log*
 out/
 dist/
 dist-ssr/
+build/
 
 # Test coverage
 coverage/
@@ -29,6 +30,7 @@ coverage/
 # Misc
 .DS_Store
 *.local
+.vercel
 
 # Cypress (if used)
 cypress/videos/
@@ -50,12 +52,19 @@ package-lock.json
 
 # TypeScript
 *.tsbuildinfo
+next-env.d.ts
 
-# Next.js build manifest
-.next/
-
+# Next.js specific
 components.d.ts
 
-# New line to ignore all files named 0.pack.gz
+# Temporary and cache files
 *.pack.gz
 trace
+.turbo
+
+# PWA files (if using next-pwa)
+public/sw.js
+public/workbox-*.js
+
+# Storybook (if used)
+storybook-static
