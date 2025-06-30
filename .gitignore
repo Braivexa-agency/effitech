@@ -49,6 +49,7 @@ cypress/screenshots/
 
 # Lock files (if not using npm)
 package-lock.json
+bun.lock
 
 # TypeScript
 *.tsbuildinfo
