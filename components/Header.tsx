@@ -10,8 +10,9 @@ import { motion } from "framer-motion";
 const NAV_LINKS = [
   { label: "Features", href: "#features" },
   { label: "Testimonials", href: "#testimonials" },
-  { label: "Pricing", href: "#pricing" },
+  { label: "About", href: "#pricing" },
   { label: "FAQ", href: "#faq" },
+  { label: "Contact", href: "#contact" },
 ];
 
 export default function Header() {
