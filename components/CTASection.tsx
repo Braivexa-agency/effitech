@@ -1,45 +1,59 @@
 import { Button } from "@/components/ui/button"
-import { ArrowRight } from "lucide-react"
+import { ArrowRight, CheckCircle, Users } from "lucide-react"
 import { motion } from "framer-motion"
 
 export default function CTASection() {
   return (
-    <section className="w-full py-20 md:py-32 bg-gradient-to-br from-primary to-primary/80 text-primary-foreground relative overflow-hidden">
-      <div className="absolute inset-0 -z-10 bg-[linear-gradient(to_right,#ffffff10_1px,transparent_1px),linear-gradient(to_bottom,#ffffff10_1px,transparent_1px)] bg-[size:4rem_4rem]"></div>
-      <div className="absolute -top-24 -left-24 w-64 h-64 bg-white/10 rounded-full blur-3xl"></div>
-      <div className="absolute -bottom-24 -right-24 w-64 h-64 bg-white/10 rounded-full blur-3xl"></div>
-      <div className="container px-4 md:px-6 relative">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
+    <section className="p-16">
+            {/* Call to Action Section */}
+            <motion.div
+          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="flex flex-col items-center justify-center space-y-6 text-center"
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="text-center bg-gradient-to-r from-primary/10 via-primary/5 to-secondary/10 rounded-2xl p-8 md:p-12 border border-primary/20"
         >
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight">
-            Ready to Transform Your Workflow?
-          </h2>
-          <p className="mx-auto max-w-[700px] text-primary-foreground/80 md:text-xl">
-            Join thousands of satisfied customers who have streamlined their processes and boosted productivity with our platform.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 mt-4">
-            <Button size="lg" variant="secondary" className="rounded-full h-12 px-8 text-base">
-              Start Free Trial
-              <ArrowRight className="ml-2 size-4" />
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="rounded-full h-12 px-8 text-base bg-transparent border-white text-white hover:bg-white/10"
-            >
-              Schedule a Demo
-            </Button>
+          <div className="max-w-3xl mx-auto">
+            <h3 className="text-2xl md:text-3xl font-bold mb-4">
+              Ready to Transform Your Electrical Infrastructure?
+            </h3>
+            <p className="text-muted-foreground mb-8 text-lg">
+              Partner with EFFI TECH for reliable, efficient, and innovative electrical engineering solutions. 
+              We don't just supply products – we implement complete systems that work.
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
+                <Users className="mr-2 size-5" />
+                Get Free Consultation
+              </Button>
+              <Button size="lg" variant="outline">
+                View Case Studies
+                <ArrowRight className="ml-2 size-4" />
+              </Button>
+            </div>
+
+            {/* Trust indicators */}
+            <div className="flex flex-wrap items-center justify-center gap-6 mt-8 text-sm text-muted-foreground">
+              <div className="flex items-center gap-2">
+                <CheckCircle className="size-4 text-primary" />
+                <span>ISO Certified</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <CheckCircle className="size-4 text-primary" />
+                <span>Expert Engineers</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <CheckCircle className="size-4 text-primary" />
+                <span>24/7 Support</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <CheckCircle className="size-4 text-primary" />
+                <span>Sustainable Solutions</span>
+              </div>
+            </div>
           </div>
-          <p className="text-sm text-primary-foreground/80 mt-4">
-            No credit card required. 14-day free trial. Cancel anytime.
-          </p>
         </motion.div>
-      </div>
     </section>
   )
 }
