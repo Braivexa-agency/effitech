@@ -140,7 +140,7 @@ export default function HowWeWorkSection() {
   };
 
   return (
-    <section id="how-we-work" className="w-full py-20 md:py-32 relative overflow-hidden">
+    <section id="how-we-work" className="w-full py-20 md:py-20 relative overflow-hidden">
       {/* Modern gradient background */}
       <div className="absolute inset-0 -z-10 bg-gradient-to-br from-background via-muted/20 to-background"></div>
       
