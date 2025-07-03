@@ -154,7 +154,7 @@ export default function TestimonialsSection() {
         }
       `}</style>
 
-      <section id="testimonials" className="w-full   relative overflow-hidden">
+      <section id="testimonials" className="w-full py-20 md:py-20 relative overflow-hidden">
         {/* Fixed background to match other sections */}
 
         {/* Animated grid pattern like other sections */}
