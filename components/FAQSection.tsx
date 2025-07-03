@@ -66,7 +66,7 @@ export default function FAQSection() {
         }
       `}</style>
 
-      <section id="faq" className="w-full py-20 md:py-32 relative overflow-hidden">
+      <section id="faq" className="w-full py-20 md:py-20 relative overflow-hidden">
         {/* Background Pattern */}
         <div className="absolute inset-0 -z-10 h-full w-full bg-[linear-gradient(to_right,hsl(var(--primary))_1px,transparent_1px),linear-gradient(to_bottom,hsl(var(--primary))_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_50%,#000_20%,transparent_100%)] opacity-[0.02]"></div>
         
