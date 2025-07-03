@@ -150,7 +150,7 @@ export default function ServicesSection() {
   };
 
   return (
-    <section id="services" className="w-full py-16 md:py-24 lg:py-32 relative overflow-hidden">
+    <section id="services" className="w-full py-20 md:py-20 relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-secondary/5 pointer-events-none" />
       
