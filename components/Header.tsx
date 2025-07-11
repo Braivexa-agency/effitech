@@ -28,7 +28,7 @@ const NAV_LINKS = [
 ] as const;
 
 // Version configuration
-const CURRENT_VERSION = "v0.1";
+const CURRENT_VERSION = "v0.2";
 
 // Animation variants
 const mobileMenuVariants = {
