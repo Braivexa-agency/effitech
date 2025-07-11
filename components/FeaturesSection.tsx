@@ -5,48 +5,16 @@ import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { 
-  Zap, 
   Settings, 
-  Shield, 
   Leaf, 
-  Factory, 
   ArrowRight,
   CheckCircle,
   Target,
-  Users,
   Award
 } from "lucide-react";
 
-// EFFI TECH Services based on the specifications document
+// EFFI TECH Services - Updated per client feedback (removed Automation, Electrical Power System, Safety)
 const services = [
-  {
-    id: "power-systems",
-    title: "Electrical Power Systems",
-    description: "Advanced electrical grid solutions and power distribution systems designed for maximum efficiency and reliability across Algeria.",
-    icon: <Zap className="size-6" />,
-    features: [
-      "High-voltage power distribution",
-      "Grid optimization solutions",
-      "Power quality monitoring",
-      "Load balancing systems"
-    ],
-    category: "Power Solutions",
-    highlight: "99.9% Uptime",
-  },
-  {
-    id: "industrial-automation",
-    title: "Industrial Automation",
-    description: "Smart manufacturing systems and AI-powered automation solutions that optimize operations and reduce costs across all sectors.",
-    icon: <Factory className="size-6" />,
-    features: [
-      "AI-powered control systems",
-      "Real-time monitoring",
-      "Predictive maintenance",
-      "Process optimization"
-    ],
-    category: "Industry 4.0",
-    highlight: "45% Efficiency Increase",
-  },
   {
     id: "compressor-technology",
     title: "Industrial Compressor Solutions",
@@ -59,7 +27,7 @@ const services = [
       "Maintenance solutions"
     ],
     category: "High-Tech Solutions",
-    highlight: "40% Energy Savings",
+    highlight: "Energy Efficient",
   },
   {
     id: "renewable-energy",
@@ -73,21 +41,7 @@ const services = [
       "Hybrid power systems"
     ],
     category: "Green Technology",
-    highlight: "50MW+ Generated",
-  },
-  {
-    id: "safety-systems",
-    title: "Safety & Protection Systems",
-    description: "Comprehensive electrical safety solutions ensuring maximum protection and compliance with international standards.",
-    icon: <Shield className="size-6" />,
-    features: [
-      "Electrical safety audits",
-      "Protection relay systems",
-      "Emergency shutdown systems",
-      "Compliance certification"
-    ],
-    category: "Safety Solutions",
-    highlight: "ISO Compliant",
+    highlight: "Sustainable Solutions",
   },
   {
     id: "consulting",
@@ -101,17 +55,8 @@ const services = [
       "Project management"
     ],
     category: "Expert Services",
-    highlight: "15+ Years Experience",
+    highlight: "Professional Expertise",
   },
-];
-
-// Service categories for filtering
-const serviceCategories = [
-  { id: "all", label: "All Services" },
-  { id: "power", label: "Power Solutions" },
-  { id: "automation", label: "Automation" },
-  { id: "renewable", label: "Renewable Energy" },
-  { id: "safety", label: "Safety Systems" }
 ];
 
 export default function ServicesSection() {
@@ -176,44 +121,20 @@ export default function ServicesSection() {
           
           <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-8">
             We deliver high-performance, energy-efficient solutions by integrating advanced electrical systems 
-            and eco-friendly technologies. From industrial automation to renewable energy, we provide complete 
+            and eco-friendly technologies. From industrial compressor solutions to renewable energy, we provide complete 
             systems that work.
           </p>
 
-          {/* Key stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-8">
-            {[
-              { value: "12,653+", label: "Organizations Powered" },
-              { value: "98%", label: "Client Satisfaction" },
-              { value: "24/7", label: "Support Available" },
-              { value: "15+", label: "Years Experience" }
-            ].map((stat, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1, duration: 0.5 }}
-                className="text-center"
-              >
-                <div className="text-2xl md:text-3xl font-bold text-primary mb-1">
-                  {stat.value}
-                </div>
-                <div className="text-sm text-muted-foreground">
-                  {stat.label}
-                </div>
-              </motion.div>
-            ))}
-          </div>
+          {/* REMOVED STATS SECTION - As per client feedback for newly established company */}
         </motion.div>
 
-        {/* Services Grid */}
+        {/* Services Grid - Now with 3 services in a centered layout */}
         <motion.div
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-50px" }}
-          className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 mb-16"
+          className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto mb-16"
         >
           {services.map((service, index) => (
             <motion.div
@@ -282,8 +203,6 @@ export default function ServicesSection() {
             </motion.div>
           ))}
         </motion.div>
-
- 
 
         {/* Background decorative elements */}
         <div className="absolute top-1/4 -left-4 w-24 h-24 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-full blur-3xl" />
