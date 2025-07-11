@@ -16,7 +16,7 @@ export default function LandingPage() {
       <Header />
       <main className="flex-1">
         <HeroSection />
-        <LogosSection />
+        {/* <LogosSection /> */}
         <FeaturesSection />
         <HowItWorksSection />
         <TestimonialsSection />
