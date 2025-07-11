@@ -141,12 +141,6 @@ export default function HowWeWorkSection() {
               {/* Header with icon and step */}
               <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between mb-12">
                 <div className="flex items-center gap-6 mb-8 lg:mb-0">
-                  <div className="relative">
-                    <div className="absolute -inset-2 bg-gradient-to-r from-primary to-secondary rounded-full blur opacity-50"></div>
-                    <div className="relative flex h-20 w-20 items-center justify-center rounded-full bg-gradient-to-br from-primary to-primary/80 text-primary-foreground text-2xl font-bold shadow-lg">
-                      {customSolutionProcess.step}
-                    </div>
-                  </div>
                   <div>
                     <h3 className="text-4xl md:text-5xl font-bold text-foreground mb-2">
                       {customSolutionProcess.title}
