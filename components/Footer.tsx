@@ -17,11 +17,16 @@ import {
   ArrowUp,
   Building2,
   Users,
-  Wrench
+  Settings,
+  Leaf,
+  Target
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { useState, useEffect } from "react";
+
+// Version configuration
+const CURRENT_VERSION = "v0.1";
 
 // Animation variants for staggered reveals
 const containerVariants = {
@@ -72,16 +77,14 @@ const socialLinks = [
   },
 ];
 
-// Footer sections
+// Updated footer sections - removed services per client feedback
 const footerSections = [
   {
     title: "Services",
     links: [
-      { name: "Power Systems Design", href: "#services", icon: Zap },
-      { name: "Industrial Automation", href: "#services", icon: Building2 },
-      { name: "Renewable Energy", href: "#services", icon: Zap },
-      { name: "Electrical Maintenance", href: "#services", icon: Wrench },
-      { name: "Safety Audits", href: "#services", icon: Shield },
+      { name: "Industrial Compressor Solutions", href: "#services", icon: Settings },
+      { name: "Renewable Energy Integration", href: "#services", icon: Leaf },
+      { name: "Engineering Consulting", href: "#services", icon: Target },
     ]
   },
   {
@@ -98,10 +101,10 @@ const footerSections = [
     title: "Resources",
     links: [
       { name: "Technical Documentation", href: "#docs", icon: Building2 },
-      { name: "Safety Guidelines", href: "#safety", icon: Shield },
       { name: "Project Portfolio", href: "#portfolio", icon: Award },
       { name: "Industry News", href: "#news", icon: Building2 },
       { name: "Support Center", href: "#support", icon: Clock },
+      { name: "Contact Us", href: "#contact", icon: Mail },
     ]
   }
 ];
@@ -165,7 +168,7 @@ export default function Footer() {
               
               {/* Company info - takes 2 columns on large screens */}
               <motion.div variants={itemVariants} className="lg:col-span-2 space-y-6">
-                {/* Enhanced logo */}
+                {/* Enhanced logo with version */}
                 <div className="space-y-4">
                   <div className="flex items-center gap-3">
                     <div className="relative">
@@ -174,13 +177,21 @@ export default function Footer() {
                         <Zap className="size-6" />
                       </div>
                     </div>
-                    <div>
-                      <h3 className="text-2xl font-bold bg-gradient-to-r from-foreground to-primary bg-clip-text text-transparent">
-                        EFFI TECH
-                      </h3>
-                      <p className="text-sm text-muted-foreground font-medium">
-                        Electrical Engineering Excellence
-                      </p>
+                    <div className="flex items-center gap-2">
+                      <div>
+                        <h3 className="text-2xl font-bold bg-gradient-to-r from-foreground to-primary bg-clip-text text-transparent">
+                          EFFI TECH
+                        </h3>
+                        <p className="text-sm text-muted-foreground font-medium">
+                          Electrical Engineering Excellence
+                        </p>
+                      </div>
+                      <Badge 
+                        className="rounded-full px-2 py-1 text-xs font-medium bg-muted/50 text-muted-foreground border-muted-foreground/20" 
+                        variant="outline"
+                      >
+                        {CURRENT_VERSION}
+                      </Badge>
                     </div>
                   </div>
                   
@@ -320,7 +331,7 @@ export default function Footer() {
                   </p>
                   <div className="flex items-center gap-2">
                     <Shield className="size-3" />
-                    <span>Proudly serving Algeria since 2020</span>
+                    <span>Proudly serving Algeria since 2025</span>
                   </div>
                 </div>
                 
@@ -346,11 +357,11 @@ export default function Footer() {
                 </div>
               </div>
 
-              {/* Trust indicators */}
+              {/* Trust indicators - updated without metrics */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4 pt-6 border-t border-primary/20">
                 <div className="flex items-center gap-2 text-xs text-muted-foreground">
                   <Clock className="size-3 text-primary" />
-                  <span>24/7 Emergency Support</span>
+                  <span>Professional Support</span>
                 </div>
                 <div className="flex items-center gap-2 text-xs text-muted-foreground">
                   <Shield className="size-3 text-primary" />
