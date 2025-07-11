@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useState, useEffect, useCallback, memo } from "react";
 import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
 import { 
   ChevronRight, 
   Menu, 
@@ -25,6 +26,9 @@ const NAV_LINKS = [
   { label: "FAQ", href: "#faq", description: "" },
   { label: "Contact", href: "#contact", description: "Get in touch" },
 ] as const;
+
+// Version configuration
+const CURRENT_VERSION = "v0.1";
 
 // Animation variants
 const mobileMenuVariants = {
@@ -65,31 +69,41 @@ const mobileMenuItemVariants = {
 
 // Logo component
 const Logo = memo(({ isScrolled }: { isScrolled: boolean }) => (
-  <Link href="/" className="flex items-center gap-3 group">
-    <div className="relative">
-      {/* Glow effect */}
-      <div className="absolute -inset-1 bg-gradient-to-r from-primary/30 to-secondary/30 rounded-xl blur opacity-0 group-hover:opacity-60 transition-opacity duration-500"></div>
-      
-      {/* Logo container */}
-      <div className="relative flex items-center gap-2 px-3 py-2 rounded-xl bg-gradient-to-br from-primary/10 to-secondary/5 group-hover:from-primary/20 group-hover:to-secondary/10 transition-all duration-300">
-        <div className="relative">
-          <Zap className="size-6 text-primary group-hover:scale-110 transition-transform duration-300" />
-          <div className="absolute -inset-1 bg-primary/20 rounded-full blur-sm opacity-0 group-hover:opacity-50 transition-opacity duration-300"></div>
-        </div>
+  <div className="flex items-center gap-3">
+    <Link href="/" className="flex items-center gap-3 group">
+      <div className="relative">
+        {/* Glow effect */}
+        <div className="absolute -inset-1 bg-gradient-to-r from-primary/30 to-secondary/30 rounded-xl blur opacity-0 group-hover:opacity-60 transition-opacity duration-500"></div>
         
-        <div className="flex flex-col">
-          <span className={`font-bold text-lg leading-none tracking-wider transition-colors duration-300 ${
-            isScrolled ? "text-foreground" : "text-foreground"
-          } group-hover:text-primary`}>
-            EFFI TECH
-          </span>
-          <span className="text-xs text-muted-foreground font-medium leading-none">
-            Electrical Excellence
-          </span>
+        {/* Logo container */}
+        <div className="relative flex items-center gap-2 px-3 py-2 rounded-xl bg-gradient-to-br from-primary/10 to-secondary/5 group-hover:from-primary/20 group-hover:to-secondary/10 transition-all duration-300">
+          <div className="relative">
+            <Zap className="size-6 text-primary group-hover:scale-110 transition-transform duration-300" />
+            <div className="absolute -inset-1 bg-primary/20 rounded-full blur-sm opacity-0 group-hover:opacity-50 transition-opacity duration-300"></div>
+          </div>
+          
+          <div className="flex flex-col">
+            <span className={`font-bold text-lg leading-none tracking-wider transition-colors duration-300 ${
+              isScrolled ? "text-foreground" : "text-foreground"
+            } group-hover:text-primary`}>
+              EFFI TECH
+            </span>
+            <span className="text-xs text-muted-foreground font-medium leading-none">
+              Electrical Excellence
+            </span>
+          </div>
         </div>
       </div>
-    </div>
-  </Link>
+    </Link>
+    
+    {/* Version Badge */}
+    <Badge 
+      className="hidden sm:inline-flex rounded-full px-2 py-1 text-xs font-medium bg-muted/50 text-muted-foreground border-muted-foreground/20" 
+      variant="outline"
+    >
+      {CURRENT_VERSION}
+    </Badge>
+  </div>
 ));
 
 Logo.displayName = "Logo";
@@ -329,7 +343,7 @@ export default function Header() {
         `}
       >
         <div className="container flex h-16 sm:h-18 md:h-20 items-center justify-between px-3 sm:px-4 md:px-6">
-          {/* Logo */}
+          {/* Logo with Version */}
           <Logo isScrolled={isScrolled} />
 
           {/* Desktop Navigation */}
@@ -427,6 +441,19 @@ export default function Header() {
               className="lg:hidden fixed top-16 sm:top-18 md:top-20 inset-x-3 z-50 bg-background/95 backdrop-blur-xl border border-primary/20 rounded-2xl shadow-2xl shadow-primary/10"
             >
               <div className="p-6">
+                {/* Version info in mobile menu */}
+                <div className="flex items-center justify-between mb-4 pb-4 border-b border-primary/10">
+                  <div className="flex items-center gap-2">
+                    <span className="text-sm font-medium text-muted-foreground">EFFI TECH</span>
+                    <Badge 
+                      className="rounded-full px-2 py-1 text-xs font-medium bg-muted/50 text-muted-foreground border-muted-foreground/20" 
+                      variant="outline"
+                    >
+                      {CURRENT_VERSION}
+                    </Badge>
+                  </div>
+                </div>
+
                 {/* Navigation Links */}
                 <motion.div className="flex flex-col gap-1 mb-6">
                   {NAV_LINKS.map((link) => {
