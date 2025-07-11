@@ -1,59 +1,17 @@
 "use client";
 
 import { useTheme } from "next-themes";
-import LogoScroller, { LogoItem } from "./LogoScroller";
 import { motion } from "framer-motion";
+import { Badge } from "@/components/ui/badge";
+import { Shield, Award, Users, Zap } from "lucide-react";
 
-const LOGOS: LogoItem[] = [
-  { 
-    name: "Microsoft", 
-    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/microsoft/microsoft-original.svg",
-    website: "https://microsoft.com"
-  },
-  { 
-    name: "Google", 
-    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg",
-    website: "https://google.com"
-  },
-  { 
-    name: "Amazon", 
-    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg",
-    website: "https://amazon.com"
-  },
-  { 
-    name: "Meta", 
-    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/facebook/facebook-original.svg",
-    website: "https://meta.com"
-  },
-  { 
-    name: "Apple", 
-    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apple/apple-original.svg",
-    website: "https://apple.com"
-  },
-  { 
-    name: "Netflix", 
-    logo: "https://images.ctfassets.net/y2ske4ux9b5k/821Nms9kJBqJHDCT4YQQ9G/8ffeab74f9a56e69b4b8f28e3ce1e8b5/netflix-logo.svg",
-    website: "https://netflix.com"
-  },
-  { 
-    name: "Spotify", 
-    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spotify/spotify-original.svg",
-    website: "https://spotify.com"
-  },
-  { 
-    name: "Slack", 
-    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/slack/slack-original.svg",
-    website: "https://slack.com"
-  },
-];
-
-export default function LogosSection() {
+export default function TrustedBySection() {
   const { theme } = useTheme();
 
   return (
-    <section className="w-full py-16 border-y  bg-muted/30 relative overflow-hidden">
+    <section className="w-full py-16 border-y bg-muted/30 relative overflow-hidden">
       {/* Background decoration */}
-      <div className="absolute inset-0 bg-background   from-primary/5 via-transparent to-secondary/5 pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-secondary/5 pointer-events-none" />
       
       <div className="container px-4 md:px-6 relative">
         <motion.div
@@ -61,67 +19,76 @@ export default function LogosSection() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="flex flex-col items-center justify-center space-y-8 text-center"
+          className="flex flex-col items-center justify-center space-y-8 text-center max-w-4xl mx-auto"
         >
-          {/* Header */}
-          <div className="space-y-2">
-            <motion.p 
-              className="text-sm font-medium text-muted-foreground"
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              viewport={{ once: true }}
-            >
-              Trusted by innovative companies worldwide
-            </motion.p>
-            <motion.h2 
-              className="text-lg font-semibold text-foreground"
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-              viewport={{ once: true }}
-            >
-              Join 12,653+ organizations already using our solutions
-            </motion.h2>
-          </div>
-
-          {/* Logo scroller */}
+          {/* Badge */}
           <motion.div
-            className="w-full"
-            initial={{ opacity: 0, scale: 0.95 }}
+            initial={{ opacity: 0, scale: 0.8 }}
             whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            <LogoScroller 
-              items={LOGOS} 
-              speed="normal"
-              direction="left"
-              pauseOnHover={true}
-              showGradient={true}
-              className="py-4"
-            />
+            <Badge 
+              className="rounded-full px-4 py-2 text-sm font-medium bg-primary/10 text-primary border-primary/20 mb-4" 
+              variant="secondary"
+            >
+              <Shield className="size-4 mr-2" />
+              Our Partnership
+            </Badge>
           </motion.div>
 
-          {/* Additional info */}
-          <motion.div
-            className="flex flex-wrap items-center justify-center gap-6 text-xs text-muted-foreground"
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.6, delay: 0.6 }}
+          {/* Main heading */}
+          <motion.h2 
+            className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
             viewport={{ once: true }}
           >
-            <div className="flex items-center gap-2">
-              <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
-              <span>99.9% Uptime</span>
+            Trusted Solutions Through Strategic Partnership
+          </motion.h2>
+
+          {/* Description */}
+          <motion.p 
+            className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-3xl"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            viewport={{ once: true }}
+          >
+            We partner with a trusted solutions provider serving high-performing businesses, enabling us to deliver reliable, proven technologies tailored to professional needs.
+          </motion.p>
+
+          {/* Trust indicators */}
+          <motion.div
+            className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12 w-full max-w-3xl"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.5 }}
+            viewport={{ once: true }}
+          >
+            <div className="flex flex-col items-center text-center p-6 rounded-xl bg-gradient-to-br from-background/80 to-muted/40 backdrop-blur-xl border border-primary/10">
+              <div className="p-3 rounded-xl bg-primary/10 text-primary mb-4">
+                <Award className="size-6" />
+              </div>
+              <h3 className="font-semibold text-foreground mb-2">Proven Technologies</h3>
+              <p className="text-sm text-muted-foreground">Reliable solutions tested by industry leaders</p>
             </div>
-            <div className="flex items-center gap-2">
-              <div className="w-2 h-2 bg-blue-500 rounded-full animate-pulse" />
-              <span>24/7 Support</span>
+
+            <div className="flex flex-col items-center text-center p-6 rounded-xl bg-gradient-to-br from-background/80 to-muted/40 backdrop-blur-xl border border-primary/10">
+              <div className="p-3 rounded-xl bg-primary/10 text-primary mb-4">
+                <Users className="size-6" />
+              </div>
+              <h3 className="font-semibold text-foreground mb-2">High-Performing Businesses</h3>
+              <p className="text-sm text-muted-foreground">Serving clients who demand excellence</p>
             </div>
-            <div className="flex items-center gap-2">
-              <div className="w-2 h-2 bg-purple-500 rounded-full animate-pulse" />
-              <span>Enterprise Ready</span>
+
+            <div className="flex flex-col items-center text-center p-6 rounded-xl bg-gradient-to-br from-background/80 to-muted/40 backdrop-blur-xl border border-primary/10">
+              <div className="p-3 rounded-xl bg-primary/10 text-primary mb-4">
+                <Zap className="size-6" />
+              </div>
+              <h3 className="font-semibold text-foreground mb-2">Professional Solutions</h3>
+              <p className="text-sm text-muted-foreground">Tailored technologies for professional needs</p>
             </div>
           </motion.div>
         </motion.div>
