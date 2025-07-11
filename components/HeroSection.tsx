@@ -15,16 +15,12 @@ interface HeroSlide {
   subtitle: string;
   description: string;
   badge?: string;
-  stats: {
-    label: string;
-    value: string;
-  }[];
   features: string[];
   ctaText: string;
   ctaHref?: string;
 }
 
-// Default slides data - easily configurable
+// Updated slides data - removed stats per client feedback
 const defaultSlides: HeroSlide[] = [
   {
     id: 1,
@@ -33,11 +29,6 @@ const defaultSlides: HeroSlide[] = [
     subtitle: "WITH EFFITECH",
     description: "Innovative Electrical Engineering Solutions Delivering Exceptional Efficiency and Performance Across Algeria, Discover EFFI TECH Today.",
     badge: "Launching Soon",
-    stats: [
-      { label: "Organizations Powered", value: "12,653+" },
-      { label: "Client Satisfaction", value: "98%" },
-      { label: "Support Availability", value: "24/7" }
-    ],
     features: ["Expert team", "Certified engineers", "ISO-compliant solutions"],
     ctaText: "Explore Our Services",
     ctaHref: "#services"
@@ -49,11 +40,6 @@ const defaultSlides: HeroSlide[] = [
     subtitle: "SMART SOLUTIONS",
     description: "Advanced automation systems and smart industrial solutions that optimize operations, reduce costs, and enhance productivity across all sectors.",
     badge: "Industry 4.0",
-    stats: [
-      { label: "Projects Completed", value: "500+" },
-      { label: "Efficiency Increase", value: "45%" },
-      { label: "Years Experience", value: "15+" }
-    ],
     features: ["AI-powered systems", "Real-time monitoring", "Predictive maintenance"],
     ctaText: "View Automation Solutions",
     ctaHref: "#automation"
@@ -65,11 +51,6 @@ const defaultSlides: HeroSlide[] = [
     subtitle: "SUSTAINABLE FUTURE",
     description: "Leading the transition to clean energy with cutting-edge solar, wind, and hybrid power solutions for a sustainable tomorrow in Algeria.",
     badge: "Green Technology",
-    stats: [
-      { label: "Clean Energy Generated", value: "50MW+" },
-      { label: "CO2 Reduction", value: "40%" },
-      { label: "Green Projects", value: "200+" }
-    ],
     features: ["Solar installations", "Wind power systems", "Energy storage"],
     ctaText: "Go Green Today",
     ctaHref: "#renewable"
@@ -156,8 +137,8 @@ export default function HeroSection({
         <div className="absolute inset-0 bg-background/70 dark:bg-[#081919]/70 backdrop-blur-[1px]"></div>
       </div>
 
-      {/* Main Content with Proper Padding */}
-      <div className="container relative z-10 flex flex-col justify-center min-h-screen">
+      {/* Main Content with Proper Padding - LOWERED TITLE POSITION */}
+      <div className="container relative z-10 flex flex-col justify-center min-h-screen pt-32 md:pt-40">
         {/* Content with optimal reading width */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <div className="max-w-4xl">
@@ -183,7 +164,7 @@ export default function HeroSection({
                   </motion.div>
                 )}
 
-                {/* Main Title */}
+                {/* Main Title - POSITIONED LOWER */}
                 <motion.h1 
                   className="text-4xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-7xl font-bold tracking-tight mb-6 md:mb-8 text-foreground leading-tight"
                   initial={{ opacity: 0, y: 20 }}
@@ -224,37 +205,13 @@ export default function HeroSection({
               </motion.div>
             </AnimatePresence>
 
-            {/* Stats Section */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.6 }}
-              className="grid grid-cols-1 sm:grid-cols-3 gap-6 md:gap-8 mb-8 md:mb-12"
-            >
-              {currentSlideData.stats.map((stat, index) => (
-                <motion.div
-                  key={`${currentSlide}-${index}`}
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ delay: 0.7 + index * 0.1 }}
-                  className="text-center sm:text-left"
-                >
-                  <div className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-primary mb-2">
-                    {stat.value}
-                  </div>
-                  <div className="text-foreground/80 text-sm md:text-lg">
-                    {stat.label}
-                  </div>
-                </motion.div>
-              ))}
-            </motion.div>
-
+            {/* REMOVED STATS SECTION - As per client feedback */}
 
             {/* Trust Indicators */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.9 }}
+              transition={{ duration: 0.6, delay: 0.6 }}
               className="flex flex-wrap items-center gap-4 md:gap-6 text-foreground/70"
             >
               {currentSlideData.features.map((feature, index) => (
