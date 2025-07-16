@@ -213,17 +213,17 @@ export default function Footer() {
                       <div className="p-2 rounded-lg bg-primary/10 group-hover:bg-primary/20 transition-colors duration-300">
                         <Phone className="size-4" />
                       </div>
-                      <span>+213 XXX XXX XXX</span>
+                      <span>+213 662 28 46 49</span>
                     </a>
                     
                     <a 
-                      href="mailto:info@effitech.dz" 
+                      href="mailto:info@effi-tech.net" 
                       className="flex items-center gap-3 text-sm text-muted-foreground hover:text-primary transition-colors duration-300 group"
                     >
                       <div className="p-2 rounded-lg bg-primary/10 group-hover:bg-primary/20 transition-colors duration-300">
                         <Mail className="size-4" />
                       </div>
-                      <span>info@effitech.dz</span>
+                      <span>info@effi-tech.net</span>
                     </a>
                     
                     <div className="flex items-start gap-3 text-sm text-muted-foreground group">
