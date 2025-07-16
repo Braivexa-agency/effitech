@@ -29,7 +29,7 @@ const defaultSlides: HeroSlide[] = [
     subtitle: "WITH EFFITECH",
     description: "Innovative Electrical Engineering Solutions Delivering Exceptional Efficiency and Performance Across Algeria, Discover EFFI TECH Today.",
     badge: "Launching Soon",
-    features: ["Expert team", "Certified engineers", "ISO-compliant solutions"],
+    features: ["Expert team", "Certified engineers"],
     ctaText: "Explore Our Services",
     ctaHref: "#services"
   },
