@@ -29,7 +29,7 @@ export const testimonials: Testimonial[] = [
     },
     {
       id: "testimonial-3",
-      quote: "Their electrical safety audit was comprehensive. EFFI TECH's ISO-compliant solutions ensure our facility meets all international standards.",
+      quote: "Their electrical safety audit was comprehensive. EFFI TECH's ensure our facility meets all international standards.",
       author: "Karim Ouali",
       role: "Operations Manager",
       company: "Cevital Group",
