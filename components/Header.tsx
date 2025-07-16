@@ -371,11 +371,11 @@ export default function Header() {
             {/* Contact info for larger screens */}
             <div className="hidden xl:flex items-center gap-4 mr-4">
               <a 
-                href="tel:+213XXXXXXX" 
+                href="tel:+213662284649" 
                 className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors duration-300"
               >
                 <Phone className="size-4" />
-                <span className="font-medium">+213 XXX XXX XXX</span>
+                <span className="font-medium">+213 662 28 46 49</span>
               </a>
             </div>
             
@@ -495,7 +495,7 @@ export default function Header() {
                   {/* Contact Info */}
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                     <a 
-                      href="tel:+213XXXXXXX" 
+                      href="tel:+213662284649" 
                       className="flex items-center gap-3 p-3 rounded-xl bg-primary/5 hover:bg-primary/10 transition-colors duration-300 group"
                     >
                       <div className="p-2 rounded-lg bg-primary/10 group-hover:bg-primary/20 transition-colors duration-300">
