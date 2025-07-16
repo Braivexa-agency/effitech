@@ -207,7 +207,7 @@ export default function Footer() {
                   
                   <div className="space-y-3">
                     <a 
-                      href="tel:+213XXXXXXX" 
+                      href="tel:+213662284649" 
                       className="flex items-center gap-3 text-sm text-muted-foreground hover:text-primary transition-colors duration-300 group"
                     >
                       <div className="p-2 rounded-lg bg-primary/10 group-hover:bg-primary/20 transition-colors duration-300">
