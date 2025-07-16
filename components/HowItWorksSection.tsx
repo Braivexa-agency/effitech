@@ -57,7 +57,7 @@ const workPrinciples = [
   {
     icon: <Award className="size-5" />,
     title: "Quality Assurance",
-    description: "ISO-compliant solutions with proven reliability"
+    description: "Solutions with proven reliability"
   }
 ];
 
