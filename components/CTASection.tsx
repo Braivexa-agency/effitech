@@ -355,7 +355,7 @@ export default function CTASection() {
                             value={formData.phone}
                             onChange={(e) => handleInputChange('phone', e.target.value)}
                             className={`rounded-xl border-primary/20 focus:border-primary/50 transition-colors ${errors.phone ? 'border-red-500 focus:border-red-500' : ''}`}
-                            placeholder="+213 5XX XXX XXX"
+                            placeholder="+213 662 28 46 49"
                             disabled={isSubmitting}
                           />
                           {errors.phone && <p className="text-sm text-red-500">{errors.phone}</p>}
@@ -475,7 +475,7 @@ export default function CTASection() {
                     </div>
                     <h3 className="text-lg font-semibold text-red-800 mb-2">Message Failed to Send</h3>
                     <p className="text-red-700">
-                      There was an error sending your message. Please try again or contact us directly at info@effitech.dz
+                      There was an error sending your message. Please try again or contact us directly at info@effi-tech.net
                     </p>
                   </motion.div>
                 )}
@@ -523,7 +523,7 @@ export default function CTASection() {
                       className="flex items-center gap-2 px-4 py-2 rounded-full bg-primary/5 hover:bg-primary/10 transition-colors duration-300 text-primary font-semibold"
                     >
                       <Phone className="size-4" />
-                      +213 XXX XXX XXX
+                     +213 662 28 46 49
                     </a>
                     <a 
                       href="mailto:info@effitech.dz" 
