@@ -519,7 +519,7 @@ export default function CTASection() {
                   </p>
                   <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                     <a 
-                      href="tel:+213XXXXXXX" 
+                      href="tel:+213662284649" 
                       className="flex items-center gap-2 px-4 py-2 rounded-full bg-primary/5 hover:bg-primary/10 transition-colors duration-300 text-primary font-semibold"
                     >
                       <Phone className="size-4" />
