@@ -503,12 +503,12 @@ export default function Header() {
                       </div>
                       <div>
                         <p className="text-xs text-muted-foreground">Call us</p>
-                        <p className="text-sm font-semibold">+213 XXX XXX XXX</p>
+                        <p className="text-sm font-semibold">+213 662 28 46 49</p>
                       </div>
                     </a>
                     
                     <a 
-                      href="mailto:info@effitech.dz" 
+                      href="mailto:info@effi-tech.net" 
                       className="flex items-center gap-3 p-3 rounded-xl bg-primary/5 hover:bg-primary/10 transition-colors duration-300 group"
                     >
                       <div className="p-2 rounded-lg bg-primary/10 group-hover:bg-primary/20 transition-colors duration-300">
@@ -516,7 +516,7 @@ export default function Header() {
                       </div>
                       <div>
                         <p className="text-xs text-muted-foreground">Email us</p>
-                        <p className="text-sm font-semibold">info@effitech.dz</p>
+                        <p className="text-sm font-semibold">info@effi-tech.net</p>
                       </div>
                     </a>
                   </div>
