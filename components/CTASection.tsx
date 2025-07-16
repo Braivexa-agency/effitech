@@ -526,11 +526,11 @@ export default function CTASection() {
                      +213 662 28 46 49
                     </a>
                     <a 
-                      href="mailto:info@effitech.dz" 
+                      href="mailto:info@effi-tech.net" 
                       className="flex items-center gap-2 px-4 py-2 rounded-full bg-primary/5 hover:bg-primary/10 transition-colors duration-300 text-primary font-semibold"
                     >
                       <Mail className="size-4" />
-                      info@effitech.dz
+                      info@effi-tech.net
                     </a>
                   </div>
                 </motion.div>
