@@ -107,13 +107,21 @@ export default function HowWeWorkSection() {
           transition={{ duration: 0.6 }}
           className="text-center max-w-4xl mx-auto mb-16"
         >
-          <Badge 
-            className="rounded-full px-6 py-2 text-sm font-medium bg-gradient-to-r from-primary/10 to-secondary/10 text-primary border-primary/20 mb-8" 
-            variant="secondary"
-          >
-            <Zap className="size-4 mr-2" />
-            How We Work
-          </Badge>
+          <div className="flex items-center justify-center gap-4 mb-8">
+            <Badge 
+              className="rounded-full px-6 py-2 text-sm font-medium bg-gradient-to-r from-primary/10 to-secondary/10 text-primary border-primary/20" 
+              variant="secondary"
+            >
+              <Zap className="size-4 mr-2" />
+              How We Work
+            </Badge>
+            <Badge 
+              className="rounded-full px-3 py-1 text-xs font-medium bg-muted/50 text-muted-foreground border-muted-foreground/20" 
+              variant="outline"
+            >
+              v1.2
+            </Badge>
+          </div>
           
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-8 bg-gradient-to-r from-foreground via-primary to-foreground bg-clip-text text-transparent">
             Precision and Excellence in Every Detail
@@ -246,20 +254,19 @@ export default function HowWeWorkSection() {
               <motion.div
                 key={index}
                 variants={principleVariants}
-                className="relative group"
+                className="relative group h-full"
               >
                 <div className="absolute -inset-0.5 bg-gradient-to-r from-primary/20 to-secondary/20 rounded-2xl blur opacity-0 group-hover:opacity-60 transition duration-300"></div>
-                <div className="relative text-center p-8 rounded-2xl bg-gradient-to-br from-background/80 to-muted/40 backdrop-blur-xl border border-primary/10 hover:border-primary/30 transition-all duration-300 hover:shadow-xl group-hover:-translate-y-1">
+                <div className="relative text-center p-8 rounded-2xl bg-gradient-to-br from-background/80 to-muted/40 backdrop-blur-xl border border-primary/10 hover:border-primary/30 transition-all duration-300 hover:shadow-xl group-hover:-translate-y-1 h-full flex flex-col">
                   <div className="relative mb-6">
-                    <div className="absolute -inset-1 bg-gradient-to-r from-primary/30 to-secondary/30 rounded-2xl blur opacity-0 group-hover:opacity-50 transition duration-300"></div>
-                    <div className="relative w-16 h-16 mx-auto rounded-2xl bg-gradient-to-br from-primary/10 to-secondary/10 flex items-center justify-center text-primary group-hover:bg-gradient-to-br group-hover:from-primary group-hover:to-secondary group-hover:text-primary-foreground transition-all duration-500 group-hover:scale-110">
+                    <div className="w-16 h-16 mx-auto rounded-2xl bg-gradient-to-br from-primary/10 to-secondary/10 flex items-center justify-center text-primary group-hover:bg-primary/20 transition-colors duration-300">
                       {principle.icon}
                     </div>
                   </div>
                   <h4 className="text-xl font-bold mb-4 group-hover:text-primary transition-colors duration-300">
                     {principle.title}
                   </h4>
-                  <p className="text-muted-foreground leading-relaxed">
+                  <p className="text-muted-foreground leading-relaxed flex-grow">
                     {principle.description}
                   </p>
                 </div>
