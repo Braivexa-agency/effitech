@@ -109,7 +109,7 @@ export default function TrustedBySection() {
             variant="secondary"
           >
             <Shield className="size-4 mr-2" />
-            Partnership Excellence
+            Partnership Excellence.
           </Badge>
 
           <h2 className="text-3xl pb-2 md:text-4xl lg:text-5xl font-bold tracking-tight leading-snug mb-6 bg-clip-text text-transparent bg-gradient-to-r from-foreground via-primary to-foreground">
