@@ -22,13 +22,13 @@ import { motion, AnimatePresence } from "framer-motion";
 const NAV_LINKS = [
   { label: "Services", href: "#services", description: "Our electrical solutions" },
   { label: "Projects", href: "#projects", description: "Case studies & portfolio" },
-  { label: "Testimonials", href: "#testimonials", description: "Client feedback" },
-  { label: "FAQ", href: "#faq", description: "" },
+  // { label: "Testimonials", href: "#testimonials", description: "Client feedback" },
+  // { label: "FAQ", href: "#faq", description: "" },
   { label: "Contact", href: "#contact", description: "Get in touch" },
 ] as const;
 
 // Version configuration
-const CURRENT_VERSION = "v0.2";
+const CURRENT_VERSION = "v0.3";
 
 // Animation variants
 const mobileMenuVariants = {
