@@ -242,10 +242,7 @@ export default function Footer() {
                 <div className="space-y-3">
                   <h4 className="text-sm font-bold text-foreground">Certifications</h4>
                   <div className="flex flex-wrap gap-2">
-                    <Badge variant="outline" className="bg-primary/5 border-primary/20 text-primary">
-                      <Award className="size-3 mr-1" />
-                      ISO 9001
-                    </Badge>
+            
                     <Badge variant="outline" className="bg-primary/5 border-primary/20 text-primary">
                       <Shield className="size-3 mr-1" />
                       Safety Certified
