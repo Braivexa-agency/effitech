@@ -50,9 +50,8 @@ const projectTypes = [
 
 // Trust indicators data
 const trustIndicators = [
-  { icon: Award, text: "ISO 9001 Certified", color: "text-blue-500" },
   { icon: Users, text: "Expert Engineers", color: "text-green-500" },
-  { icon: Clock, text: "24/7 Support", color: "text-orange-500" },
+  { icon: Clock, text: "7/7 Support", color: "text-orange-500" },
   { icon: Shield, text: "Safety Compliant", color: "text-purple-500" },
 ];
 
@@ -486,7 +485,7 @@ export default function CTASection() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: 0.4 }}
-                  className="grid grid-cols-2 md:grid-cols-4 gap-6 pt-8 border-t border-primary/20"
+                  className="grid grid-cols-2 md:grid-cols-3 gap-6 pt-8 px-8 border-t border-primary/20"
                 >
                   {trustIndicators.map((indicator, index) => {
                     const IconComponent = indicator.icon;
