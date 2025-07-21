@@ -115,12 +115,6 @@ export default function HowWeWorkSection() {
               <Zap className="size-4 mr-2" />
               How We Work
             </Badge>
-            <Badge 
-              className="rounded-full px-3 py-1 text-xs font-medium bg-muted/50 text-muted-foreground border-muted-foreground/20" 
-              variant="outline"
-            >
-              v1.2
-            </Badge>
           </div>
           
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-8 bg-gradient-to-r from-foreground via-primary to-foreground bg-clip-text text-transparent">
