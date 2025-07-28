@@ -92,7 +92,6 @@ const footerSections = [
     links: [
       { name: "About Us", href: "#about", icon: Users },
       { name: "Our Team", href: "#team", icon: Users },
-      { name: "Case Studies", href: "#cases", icon: Award },
       { name: "Certifications", href: "#certifications", icon: Award },
       { name: "Careers", href: "#careers", icon: Building2 },
     ]
