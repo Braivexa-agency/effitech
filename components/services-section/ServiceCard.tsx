@@ -7,6 +7,7 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import { ArrowRight, CheckCircle, Award } from 'lucide-react';
+import { renderIcon } from './icons-utils';
 import type { ServiceCardProps } from './types';
 
 export const ServiceCard = memo<ServiceCardProps>(({ 
@@ -39,7 +40,7 @@ export const ServiceCard = memo<ServiceCardProps>(({
               whileHover={{ scale: 1.1, rotate: 5 }}
               transition={{ duration: 0.2 }}
             >
-              {service.icon}
+              {renderIcon(service.icon, "size-6")}
             </motion.div>
             <Badge variant="outline" className="text-xs">
               {service.category}
