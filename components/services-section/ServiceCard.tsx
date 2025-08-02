@@ -28,8 +28,8 @@ export const ServiceCard = memo<ServiceCardProps>(
         whileHover="hover"
         variants={cardHoverVariants}
       >
-        <Card className="h-full group relative overflow-hidden border-border/40 bg-gradient-to-b from-background to-muted/20 backdrop-blur transition-all duration-300 hover:shadow-lg hover:border-primary/20">
-          <CardHeader className="pb-4">
+        <Card className="h-[550px] group relative overflow-hidden border-border/40 bg-gradient-to-b from-background to-muted/20 backdrop-blur transition-all duration-300 hover:shadow-lg hover:border-primary/20 flex flex-col">
+          <CardHeader className="pb-4 flex-shrink-0">
             {/* Service icon and category */}
             <div className="flex items-start justify-between mb-4">
               <motion.div
@@ -58,14 +58,14 @@ export const ServiceCard = memo<ServiceCardProps>(
             </div>
           </CardHeader>
 
-          <CardContent className="pt-0">
+          <CardContent className="pt-0 flex-1 flex flex-col">
             {/* Service description */}
             <p className="text-muted-foreground mb-6 leading-relaxed">
               {service.description}
             </p>
 
             {/* Service features */}
-            <div className="space-y-2 mb-6">
+            <div className="space-y-2 mb-6 flex-1">
               {service.features.map((feature, featureIndex) => (
                 <motion.div
                   key={featureIndex}
@@ -84,7 +84,7 @@ export const ServiceCard = memo<ServiceCardProps>(
             {/* Learn More Button */}
             <Button
               variant="outline"
-              className="w-full group-hover:bg-primary group-hover:text-primary-foreground group-hover:border-primary transition-all duration-300"
+              className="w-full group-hover:bg-primary group-hover:text-primary-foreground group-hover:border-primary transition-all duration-300 mt-auto"
               onClick={() => onLearnMore(service)}
             >
               Learn More
