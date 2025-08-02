@@ -66,6 +66,22 @@ export const CTASection = memo<CTASectionProps>(({
 
   const handleFormCancel = useCallback(() => {
     setShowForm(false);
+    
+    // Scroll to top of contact section when form is closed
+    setTimeout(() => {
+      const contactSection = document.getElementById('contact');
+      if (contactSection) {
+        const header = document.querySelector('header');
+        const headerHeight = header ? header.offsetHeight : 0;
+        const elementPosition = contactSection.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - headerHeight + 40;
+        
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth'
+        });
+      }
+    }, 100); // Small delay to ensure form closing animation starts
   }, []);
 
   return (
