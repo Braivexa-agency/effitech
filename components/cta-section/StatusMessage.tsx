@@ -19,10 +19,10 @@ export const StatusMessage = memo<StatusMessageProps>(({
           icon: Loader2,
           title: 'Sending Message...',
           message: 'Please wait while we process your request.',
-          bgColor: 'bg-blue-50',
-          borderColor: 'border-blue-200',
-          textColor: 'text-blue-800',
-          iconColor: 'text-blue-600',
+          bgColor: 'bg-blue-50 dark:bg-blue-950/20',
+          borderColor: 'border-blue-200 dark:border-blue-800',
+          textColor: 'text-blue-800 dark:text-blue-200',
+          iconColor: 'text-blue-600 dark:text-blue-400',
           iconClass: 'animate-spin',
         };
       
@@ -31,22 +31,22 @@ export const StatusMessage = memo<StatusMessageProps>(({
           icon: CheckCircle,
           title: 'Message Sent Successfully!',
           message: successMessage,
-          bgColor: 'bg-green-50',
-          borderColor: 'border-green-200',
-          textColor: 'text-green-800',
-          iconColor: 'text-green-600',
+          bgColor: 'bg-green-50 dark:bg-green-950/20',
+          borderColor: 'border-green-200 dark:border-green-800',
+          textColor: 'text-green-800 dark:text-green-200',
+          iconColor: 'text-green-600 dark:text-green-400',
           iconClass: '',
         };
       
       case 'error':
         return {
           icon: AlertCircle,
-          title: 'Message Failed to Send',
+          title: 'Unable to Send Message',
           message: errorMessage,
-          bgColor: 'bg-red-50',
-          borderColor: 'border-red-200',
-          textColor: 'text-red-800',
-          iconColor: 'text-red-600',
+          bgColor: 'bg-red-50 dark:bg-red-950/20',
+          borderColor: 'border-red-200 dark:border-red-800',
+          textColor: 'text-red-800 dark:text-red-200',
+          iconColor: 'text-red-600 dark:text-red-400',
           iconClass: '',
         };
       
