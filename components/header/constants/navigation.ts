@@ -19,7 +19,7 @@ export const NAV_LINKS: readonly NavLink[] = [
   },
 ] as const;
 
-export const CURRENT_VERSION = "v0.4" as const;
+export const CURRENT_VERSION = "v0.5" as const;
 
 export const CONTACT_INFO = {
   phone: "+213662284649",
