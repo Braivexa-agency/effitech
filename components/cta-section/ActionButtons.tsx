@@ -28,7 +28,7 @@ export const ActionButtons = memo<ActionButtonsProps>(({
         height: isFormVisible ? 0 : "auto"
       }}
       className={`
-        flex flex-col sm:flex-row gap-4 justify-center items-center mb-8 overflow-hidden
+        flex flex-col sm:flex-row gap-4 justify-center items-center mb-8 overflow-hidden py-4
         ${className}
       `}
       style={{ 
@@ -43,7 +43,7 @@ export const ActionButtons = memo<ActionButtonsProps>(({
           relative overflow-hidden bg-primary hover:bg-primary/90 text-primary-foreground 
           px-8 py-4 text-lg font-semibold rounded-full 
           transition-all duration-300 group
-          hover:scale-105 hover:shadow-xl hover:shadow-primary/25
+          hover:scale-105 hover:shadow-xs hover:shadow-primary/25
           focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2
           active:scale-95
         "
