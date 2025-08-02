@@ -20,6 +20,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import { ContactForm } from '@/components/cta-section';
 import { useState } from 'react';
 import type { ServiceDetailModalProps } from './types';
+import { renderIcon } from './icons-utils';
 
 export const ServiceDetailModal = memo<ServiceDetailModalProps>(({ 
   service, 
@@ -91,7 +92,7 @@ export const ServiceDetailModal = memo<ServiceDetailModalProps>(({
                 <div className="p-6 pb-4 border-b border-border/40">
                   <div className="flex items-start gap-4">
                     <div className="size-16 rounded-2xl bg-primary/10 flex items-center justify-center text-primary">
-                      {service.icon}
+                      {renderIcon(service.icon, "size-6")}
                     </div>
                     <div className="flex-1">
                       <Badge variant="outline" className="mb-2">
