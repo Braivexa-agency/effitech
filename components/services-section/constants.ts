@@ -1,17 +1,14 @@
 // components/services-section/constants.ts
 import {
-  Settings,
-  Leaf,
-  Target,
-  Zap,
-  Shield,
   Gauge,
+  Zap,
   Wrench,
   BarChart,
   Battery,
   Wind,
   Sun,
   Cog,
+  Shield,
 } from "lucide-react";
 import type { Service } from "./types";
 
