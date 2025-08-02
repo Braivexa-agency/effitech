@@ -26,7 +26,7 @@ import { Badge } from "@/components/ui/badge";
 import { useState, useEffect } from "react";
 
 // Version configuration
-const CURRENT_VERSION = "v0.3";
+const CURRENT_VERSION = "v0.4";
 
 // Animation variants for staggered reveals
 const containerVariants = {
