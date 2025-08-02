@@ -28,7 +28,7 @@ export const ContactForm = memo<ContactFormProps>(({
     resetForm,
   } = useContactForm();
 
-  const { status, isSubmitting, submitForm, resetStatus } = useFormSubmission();
+  const { status, isSubmitting, submitForm, resetStatus, error: submissionError } = useFormSubmission();
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -50,7 +50,8 @@ export const ContactForm = memo<ContactFormProps>(({
       
     } catch (error) {
       console.error('Form submission failed:', error);
-      // Error is already handled by useFormSubmission
+      // Error status is already set by useFormSubmission hook
+      // The error will be displayed in StatusMessage component
     }
   };
 
@@ -90,6 +91,7 @@ export const ContactForm = memo<ContactFormProps>(({
         {/* Status Messages */}
         <StatusMessage 
           status={status} 
+          errorMessage={submissionError || undefined}
           className="mb-6"
         />
 
@@ -192,33 +194,31 @@ export const ContactForm = memo<ContactFormProps>(({
               size="lg"
               disabled={isSubmitting || !isValid}
               className="
-                flex-1 bg-primary hover:bg-primary/90 text-primary-foreground 
+                flex-1 relative overflow-hidden bg-primary hover:bg-primary/90 text-primary-foreground 
                 px-8 py-4 text-lg font-semibold rounded-full 
-                hover:scale-105 transition-all duration-300 hover:shadow-lg 
-                hover:shadow-primary/25 disabled:hover:scale-100 
-                disabled:opacity-50 disabled:cursor-not-allowed
+                transition-all duration-300 hover:shadow-lg 
+                hover:shadow-primary/25 group
+                hover:scale-105 active:scale-95
+                disabled:hover:scale-100 disabled:opacity-50 disabled:cursor-not-allowed
                 focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2
               "
             >
+              {/* Shimmer effect */}
+              <div 
+                className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -skew-x-12 translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-1000"
+                aria-hidden="true"
+              />
+              
               {isSubmitting ? (
-                <motion.div 
-                  className="flex items-center gap-3"
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ duration: 0.2 }}
-                >
-                  <motion.div
-                    animate={{ rotate: 360 }}
-                    transition={{ duration: 1, repeat: Infinity, ease: 'linear' }}
-                    className="w-5 h-5 border-2 border-white border-t-transparent rounded-full"
-                  />
+                <span className="relative flex items-center gap-3">
+                  <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin" />
                   Sending...
-                </motion.div>
+                </span>
               ) : (
-                <div className="flex items-center gap-3">
-                  <Mail className="size-5" />
+                <span className="relative flex items-center gap-3">
+                  <Mail className="size-5 group-hover:scale-110 group-hover:rotate-3 transition-all duration-200" />
                   Send Message
-                </div>
+                </span>
               )}
             </Button>
             
@@ -229,15 +229,18 @@ export const ContactForm = memo<ContactFormProps>(({
               onClick={handleCancel}
               disabled={isSubmitting}
               className="
-                px-8 py-4 text-lg font-semibold rounded-full 
-                hover:scale-105 transition-all duration-300 
+                relative overflow-hidden px-8 py-4 text-lg font-semibold rounded-full 
+                transition-all duration-300 
                 border-primary/30 hover:border-primary/50 hover:bg-primary/5
+                hover:scale-105 active:scale-95 group
                 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100
                 focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2
               "
             >
-              <X className="size-5 mr-2" />
-              Cancel
+              <span className="relative flex items-center gap-2">
+                <X className="size-5 group-hover:scale-110 group-hover:rotate-90 transition-all duration-200" />
+                Cancel
+              </span>
             </Button>
           </motion.div>
 
