@@ -20,6 +20,7 @@ declare global {
 
 export const useFormSubmission = (): UseFormSubmissionReturn => {
   const [status, setStatus] = useState<SubmissionStatus>('idle');
+  const [currentError, setCurrentError] = useState<string | null>(null);
 
   // Use the email service hook
   const { sendEmail, isLoading, error } = useEmailService({
@@ -114,18 +115,22 @@ export const useFormSubmission = (): UseFormSubmissionReturn => {
       return; // Prevent double submission
     }
 
-    // Check rate limiting
-    if (!checkRateLimit()) {
-      const resetTime = getRateLimitResetTime();
-      const minutes = Math.ceil(resetTime / (60 * 1000));
-      throw new Error(`Too many submissions. Please try again in ${minutes} minutes.`);
-    }
-
     setStatus('submitting');
 
     try {
+      // Check rate limiting first
+      if (!checkRateLimit()) {
+        const resetTime = getRateLimitResetTime();
+        const minutes = Math.ceil(resetTime / (60 * 1000));
+        const errorMessage = `Too many submissions. Please try again in ${minutes} minute${minutes > 1 ? 's' : ''}.`;
+        
+        setStatus('error');
+        throw new Error(errorMessage);
+      }
+
       // Validate required fields one more time
       if (!data.name.trim() || !data.email.trim() || !data.phone.trim() || !data.message.trim()) {
+        setStatus('error');
         throw new Error('Please fill in all required fields');
       }
 
@@ -136,6 +141,8 @@ export const useFormSubmission = (): UseFormSubmissionReturn => {
 
     } catch (error) {
       console.error('Form submission error:', error);
+      const errorMessage = error instanceof Error ? error.message : 'An unexpected error occurred';
+      setCurrentError(errorMessage);
       setStatus('error');
       throw error;
     }
@@ -144,6 +151,7 @@ export const useFormSubmission = (): UseFormSubmissionReturn => {
   // Reset status
   const resetStatus = useCallback(() => {
     setStatus('idle');
+    setCurrentError(null);
   }, []);
 
   const isSubmitting = status === 'submitting' || isLoading;
@@ -153,5 +161,6 @@ export const useFormSubmission = (): UseFormSubmissionReturn => {
     isSubmitting,
     submitForm,
     resetStatus,
+    error: currentError || error, // Return current error or email service error
   };
 };
