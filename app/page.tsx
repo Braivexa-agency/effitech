@@ -5,7 +5,7 @@ import HeroSection from "@/components/HeroSection";
 import HowItWorksSection from "@/components/HowItWorksSection";
 import { CTASection } from "@/components/cta-section/CTASection";
 import Footer from "@/components/Footer";
-import LogosSection from "@/components/LogosSection";
+import  Partnership from "@/components/Partnership";
 import { ServicesSection } from "@/components/services-section";
 
 export default function LandingPage() {
@@ -14,7 +14,7 @@ export default function LandingPage() {
       <Header />
       <main className="flex-1">
         <HeroSection />
-        <LogosSection />
+        <Partnership />
         <ServicesSection />
         <HowItWorksSection />
         {/* <TestimonialsSection /> */}

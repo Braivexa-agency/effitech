@@ -6,7 +6,6 @@ import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Shield, Award, Users, Zap, Star } from "lucide-react";
 
-// Partnership benefits data (UPDATED)
 const benefits = [
   {
     id: "reliable-tech",
@@ -55,7 +54,7 @@ const benefits = [
   },
 ];
 
-export default function TrustedBySection() {
+export default function Partnership() {
   const { theme } = useTheme();
 
   const containerVariants = {
