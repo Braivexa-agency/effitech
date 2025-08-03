@@ -10,10 +10,8 @@ import {
   ChevronLeft,
   ChevronRight,
 } from "lucide-react";
-import { memo, useRef, useEffect, useCallback } from "react";
+import { memo, useRef } from "react";
 import { Testimonial, testimonials } from "./data";
-
-// TypeScript interface
 
 const TestimonialItem = memo(
   ({ testimonial }: { testimonial: Testimonial }) => {
