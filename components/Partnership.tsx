@@ -1,6 +1,5 @@
 "use client";
 
-import { useTheme } from "next-themes";
 import { motion } from "framer-motion";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
@@ -55,7 +54,6 @@ const benefits = [
 ];
 
 export default function Partnership() {
-  const { theme } = useTheme();
 
   const containerVariants = {
     hidden: { opacity: 0 },
