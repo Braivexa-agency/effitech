@@ -192,7 +192,7 @@ export const ContactForm = memo<ContactFormProps>(({
             <Button
               type="submit"
               size="lg"
-              disabled={isSubmitting || !isValid}
+              disabled={isSubmitting}
               className="
                 flex-1 relative overflow-hidden bg-primary hover:bg-primary/90 text-primary-foreground 
                 px-8 py-4 text-lg font-semibold rounded-full 
