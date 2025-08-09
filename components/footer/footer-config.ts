@@ -89,13 +89,13 @@ import {
     { 
       name: "Facebook", 
       icon: Facebook, 
-      href: "https://facebook.com/effitech", 
+      href: "https://www.facebook.com/profile.php?id=61578930523459", 
       color: "hover:text-blue-600" 
     },
     { 
       name: "LinkedIn", 
       icon: Linkedin, 
-      href: "https://linkedin.com/company/effitech", 
+      href: "https://www.linkedin.com/company/108296264/admin/dashboard/", 
       color: "hover:text-blue-500" 
     },
     { 
