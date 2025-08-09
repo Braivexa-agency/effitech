@@ -1,22 +1,11 @@
 "use client";
 
-import Link from "next/link";
 import { motion } from "framer-motion";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
 import { useState, useEffect, useCallback } from "react";
 import { footerConfig, socialLinks, footerSections } from "./footer-config";
 import { containerVariants, itemVariants } from "./footer-animations";
 import { FooterLogo,ContactInfo,Certifications,SocialMedia,Newsletter,TrustIndicators,ScrollToTopButton,FooterBackground,LegalLinks,FooterSection } from "./components/index";
-// import { ContactInfo } from "./components/ContactInfo";
-// import { Certifications } from "./components/Certifications";
-// import { SocialMedia } from "./components/SocialMedia";
-// import { Newsletter } from "./components/Newsletter";
-// import { TrustIndicators } from "./components/TrustIndicators";
-// import { ScrollToTopButton } from "./components/ScrollToTopButton";
-// import { FooterBackground } from "./components/FooterBackground";
-// import { LegalLinks } from "./components/LegalLinks";
-// import { FooterSection } from "./components/FooterSection";
+
 
 /**
  * Main Footer Component
