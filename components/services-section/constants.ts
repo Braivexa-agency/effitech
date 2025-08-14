@@ -53,12 +53,7 @@ export const SERVICES: readonly Service[] = [
     ],
 
     technicalFeatures: [
-      {
-        title: "Variable Speed Drives",
-        description:
-          "Advanced VSD technology that adjusts compressor speed based on demand",
-        icon: Gauge,
-      },
+    
       {
         title: "Smart Controls",
         description:
@@ -79,30 +74,10 @@ export const SERVICES: readonly Service[] = [
         description: "Advanced oil-free technology for critical applications",
         advantage: "100% contaminant-free compressed air",
       },
-      {
-        name: "Magnetic Bearing Technology",
-        description: "Contactless magnetic bearings for maximum efficiency",
-        advantage: "Zero maintenance, maximum efficiency",
-      },
     ],
 
     caseStudies: [
-      {
-        title: "Manufacturing Plant Efficiency Upgrade",
-        description:
-          "Complete compressor system overhaul reducing energy costs by 45%",
-        location: "Algiers Industrial Zone",
-        year: "2024",
-        client: "Major Manufacturing Facility",
-      },
-      {
-        title: "Food Processing Facility",
-        description:
-          "Oil-free compressor installation ensuring food safety compliance",
-        location: "Oran",
-        year: "2023",
-        client: "Food Processing Company",
-      },
+     
     ],
 
     contactTitle: "Ready to Optimize Your Compressor Systems?",
@@ -278,35 +253,11 @@ export const SERVICES: readonly Service[] = [
     ],
 
     technologies: [
-      {
-        name: "ETAP Power Systems",
-        description:
-          "Advanced electrical system analysis and modeling software",
-        advantage: "Precise load flow and fault analysis",
-      },
-      {
-        name: "Energy Monitoring Systems",
-        description: "Real-time energy monitoring and analysis tools",
-        advantage: "Data-driven efficiency insights",
-      },
+     
     ],
 
     caseStudies: [
-      {
-        title: "Industrial Facility Power Study",
-        description:
-          "Comprehensive electrical system analysis reducing downtime by 80%",
-        location: "Skikda Industrial Complex",
-        year: "2024",
-        client: "Petrochemical Facility",
-      },
-      {
-        title: "Hospital Electrical Upgrade",
-        description: "Critical power system design ensuring 99.99% reliability",
-        location: "Algiers Medical Center",
-        year: "2023",
-        client: "Healthcare Facility",
-      },
+    
     ],
 
     contactTitle: "Need Expert Electrical Engineering Advice?",
