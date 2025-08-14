@@ -133,14 +133,14 @@ export const SERVICES: readonly Service[] = [
     highlight: "Sustainable Solutions",
 
     detailedDescription:
-      "As Algeria moves toward a sustainable energy future, EFFI TECH is at the forefront of renewable energy integration. Our comprehensive solutions encompass solar photovoltaic systems, wind power integration, energy storage solutions, and smart grid technologies.",
+      "As Algeria moves toward a sustainable energy future, EFFI TECH is at the forefront of renewable energy integration. Our comprehensive solutions encompass advanced energy storage systems, smart grid technologies, and innovative power management solutions",
 
     keyBenefits: [
       {
         title: "Energy Independence",
         description:
-          "Reduce reliance on grid electricity with self-sufficient renewable systems",
-        metric: "80% independence",
+          "Lower reliance on grid electricity through efficient systems that maximize performance and minimize consumption.",
+        metric: "Reduced Grid Dependence",
       },
       {
         title: "Cost Savings",
@@ -149,61 +149,61 @@ export const SERVICES: readonly Service[] = [
       },
       {
         title: "Environmental Impact",
-        description: "Dramatically reduce carbon footprint with clean energy",
-        metric: "Zero emissions",
+        description: "Significantly reduce carbon footprint through cleaner, more efficient energy solutions.",
+        metric: "Environmental Impact",
       },
     ],
 
     technicalFeatures: [
       {
-        title: "Solar PV Systems",
+        title: "High-Efficiency Power Systems",
         description:
-          "High-efficiency photovoltaic panels with maximum power point tracking",
+          "Advanced energy generation technologies designed for maximum performance and minimal losses.",
         icon: Sun,
       },
       {
-        title: "Wind Power Integration",
+        title: "Low-Maintenance Operation Durable",
         description:
-          "Small to medium-scale wind turbines for optimal energy harvesting",
+          "Streamlined systems engineered to reduce servicing needs and downtime.",
         icon: Wind,
       },
       {
-        title: "Battery Storage",
-        description: "Advanced lithium-ion and flow battery storage solutions",
+        title: "Cost-Optimized Performance",
+        description: "Solutions that lower operating expenses over time through improved efficiency and extended lifespan.",
         icon: Battery,
       },
     ],
 
     technologies: [
-      {
-        name: "Bifacial Solar Panels",
-        description: "Advanced panels that capture light from both sides",
-        advantage: "Up to 30% more energy generation",
-      },
-      {
-        name: "Energy Management Systems",
-        description:
-          "AI-powered optimization of energy production and consumption",
-        advantage: "Intelligent load management",
-      },
+      // {
+      //   name: "Bifacial Solar Panels",
+      //   description: "Advanced panels that capture light from both sides",
+      //   advantage: "Up to 30% more energy generation",
+      // },
+      // {
+      //   name: "Energy Management Systems",
+      //   description:
+      //     "AI-powered optimization of energy production and consumption",
+      //   advantage: "Intelligent load management",
+      // },
     ],
 
     caseStudies: [
-      {
-        title: "Commercial Solar Installation",
-        description: "500kW solar array providing 70% of facility energy needs",
-        location: "Constantine Business Park",
-        year: "2024",
-        client: "Commercial Complex",
-      },
-      {
-        title: "Hybrid Wind-Solar System",
-        description:
-          "Combined renewable system for rural community electrification",
-        location: "Tamanrasset Region",
-        year: "2023",
-        client: "Rural Development Project",
-      },
+      // {
+      //   title: "Commercial Solar Installation",
+      //   description: "500kW solar array providing 70% of facility energy needs",
+      //   location: "Constantine Business Park",
+      //   year: "2024",
+      //   client: "Commercial Complex",
+      // },
+      // {
+      //   title: "Hybrid Wind-Solar System",
+      //   description:
+      //     "Combined renewable system for rural community electrification",
+      //   location: "Tamanrasset Region",
+      //   year: "2023",
+      //   client: "Rural Development Project",
+      // },
     ],
 
     contactTitle: "Ready to Go Renewable?",
