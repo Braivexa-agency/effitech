@@ -53,7 +53,13 @@ export const SERVICES: readonly Service[] = [
     ],
 
     technicalFeatures: [
-    
+      {
+        title: "Scalable Compressor Sizing",
+        description:
+          "Modular and adaptable compressor configurations that can be scaled to meet varying capacity requirements, ensuring optimal capacity utilization.",
+        icon: Gauge,
+      },
+
       {
         title: "Smart Controls",
         description:
@@ -61,9 +67,9 @@ export const SERVICES: readonly Service[] = [
         icon: Zap,
       },
       {
-        title: "Preventive Maintenance",
+        title: "Minimal Maintenance Requirements",
         description:
-          "Predictive maintenance using AI algorithms to prevent breakdowns",
+          "Advanced system design and robust engineering that significantly reduce servicing frequency and operational interruptions.",
         icon: Wrench,
       },
     ],
@@ -76,9 +82,7 @@ export const SERVICES: readonly Service[] = [
       },
     ],
 
-    caseStudies: [
-     
-    ],
+    caseStudies: [],
 
     contactTitle: "Ready to Optimize Your Compressor Systems?",
     contactDescription:
@@ -124,7 +128,8 @@ export const SERVICES: readonly Service[] = [
       },
       {
         title: "Environmental Impact",
-        description: "Significantly reduce carbon footprint through cleaner, more efficient energy solutions.",
+        description:
+          "Significantly reduce carbon footprint through cleaner, more efficient energy solutions.",
         metric: "Environmental Impact",
       },
     ],
@@ -144,7 +149,8 @@ export const SERVICES: readonly Service[] = [
       },
       {
         title: "Cost-Optimized Performance",
-        description: "Solutions that lower operating expenses over time through improved efficiency and extended lifespan.",
+        description:
+          "Solutions that lower operating expenses over time through improved efficiency and extended lifespan.",
         icon: Battery,
       },
     ],
@@ -252,13 +258,9 @@ export const SERVICES: readonly Service[] = [
       },
     ],
 
-    technologies: [
-     
-    ],
+    technologies: [],
 
-    caseStudies: [
-    
-    ],
+    caseStudies: [],
 
     contactTitle: "Need Expert Electrical Engineering Advice?",
     contactDescription:
