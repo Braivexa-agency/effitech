@@ -36,9 +36,9 @@ const defaultSlides: HeroSlide[] = [
   {
     id: 2,
     image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1920&h=1080&fit=crop&q=80",
-    title: "INDUSTRIAL AUTOMATION",
-    subtitle: "SMART SOLUTIONS",
-    description: "Advanced automation systems and smart industrial solutions that optimize operations, reduce costs, and enhance productivity across all sectors.",
+    title: "INDUSTRIAL ENGINEERING",
+    subtitle: "EFFIENT ENERGY & SOLUTIONS",
+    description: "High-performance industrial systems and engineering services designed to optimize energy efficiency, extend equipment lifespan, and ensure reliable operation across diverse industrial sectors.",
     badge: "Industry 4.0",
     features: ["AI-powered systems", "Real-time monitoring", "Predictive maintenance"],
     ctaText: "View Automation Solutions",
@@ -49,9 +49,9 @@ const defaultSlides: HeroSlide[] = [
     image: "https://images.unsplash.com/photo-1509391366360-2e959784a276?w=1920&h=1080&fit=crop&q=80",
     title: "RENEWABLE ENERGY",
     subtitle: "SUSTAINABLE FUTURE",
-    description: "Leading the transition to clean energy with cutting-edge solar, wind, and hybrid power solutions for a sustainable tomorrow in Algeria.",
+    description: "Leading the transition to clean energy with advanced hybrid power solutions, delivering reliable and sustainable technologies for a greener future in Africa",
     badge: "Green Technology",
-    features: ["Solar installations", "Wind power systems", "Energy storage"],
+    features: ["Energy storage"],
     ctaText: "Go Green Today",
     ctaHref: "#renewable"
   }
