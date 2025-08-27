@@ -63,7 +63,6 @@ export default function Footer() {
               {/* Company info section */}
               <motion.div variants={itemVariants} className="lg:col-span-2 space-y-6">
                 <FooterLogo 
-                  version={footerConfig.currentVersion}
                   companyName={footerConfig.companyName}
                   tagline={footerConfig.tagline}
                   description={footerConfig.description}
