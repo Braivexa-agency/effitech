@@ -221,7 +221,7 @@ export const SERVICES: readonly Service[] = [
       {
         title: "Expert Knowledge",
         description:
-          "Access to specialized electrical engineering expertise and industry insights",
+          "Access to specialized systems and solutions for industrial projects  expertise and industry insights",
         metric: "10+ years experience",
       },
       {
