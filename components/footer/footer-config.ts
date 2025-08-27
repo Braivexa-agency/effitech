@@ -19,7 +19,6 @@ import {
   
   // Main configuration object
   export const footerConfig = {
-    currentVersion: "v0.6",
     companyName: "EFFI TECH",
     tagline: "Systems and solutions for industrial projects",
     description: "Leading electrical engineering solutions across Algeria. We deliver innovative, sustainable, and reliable electrical systems for industrial, commercial, and residential projects.",
