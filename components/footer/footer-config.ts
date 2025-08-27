@@ -21,7 +21,7 @@ import {
   export const footerConfig = {
     currentVersion: "v0.6",
     companyName: "EFFI TECH",
-    tagline: "Electrical Engineering Excellence",
+    tagline: "Systems and solutions for industrial projects",
     description: "Leading electrical engineering solutions across Algeria. We deliver innovative, sustainable, and reliable electrical systems for industrial, commercial, and residential projects.",
     foundedYear: 2025,
     brandIcon: Shield,
@@ -41,7 +41,7 @@ import {
       },
       {
         type: "address",
-        label: "Blida, Algeria",
+        label: "Algiers, Algeria",
         subtitle: "Serving all major cities across Algeria",
         icon: MapPin
       }
