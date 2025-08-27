@@ -42,13 +42,12 @@ interface FooterSection {
 
 // FooterLogo Component
 interface FooterLogoProps {
-  version: string;
   companyName: string;
   tagline: string;
   description: string;
 }
 
-export function FooterLogo({ version, companyName, tagline, description }: FooterLogoProps) {
+export function FooterLogo({ companyName, tagline, description }: FooterLogoProps) {
   return (
     <div className="space-y-4">
       <div className="flex items-center gap-3">
@@ -67,12 +66,7 @@ export function FooterLogo({ version, companyName, tagline, description }: Foote
               {tagline}
             </p>
           </div>
-          <Badge 
-            className="rounded-full px-2 py-1 text-xs font-medium bg-muted/50 text-muted-foreground border-muted-foreground/20" 
-            variant="outline"
-          >
-            {version}
-          </Badge>
+        
         </div>
       </div>
       
