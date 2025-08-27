@@ -16,4 +16,4 @@ export { useActiveSection } from './hooks/useActiveSection';
 export { useMobileMenu } from './hooks/useMobileMenu';
 
 // Export constants
-export { NAV_LINKS, CURRENT_VERSION, CONTACT_INFO } from './constants/navigation';
+export { NAV_LINKS, CONTACT_INFO } from './constants/navigation';
