@@ -19,8 +19,6 @@ export const NAV_LINKS: readonly NavLink[] = [
   },
 ] as const;
 
-export const CURRENT_VERSION = "v0.6" as const;
-
 export const CONTACT_INFO = {
   phone: "+213662284649",
   email: "info@effi-tech.net",
