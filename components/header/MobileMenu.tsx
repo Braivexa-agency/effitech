@@ -8,7 +8,7 @@ import { ChevronRight, Phone, Mail, X, Menu } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { CTAButton } from './CTAButton';
-import { CURRENT_VERSION, CONTACT_INFO } from './constants/navigation';
+import { CONTACT_INFO } from './constants/navigation';
 import type { MobileMenuProps } from './types';
 
 // Animation variants
@@ -138,13 +138,7 @@ export const MobileMenu = memo<MobileMenuProps>(({
                 >
                   EFFI TECH
                 </span>
-                <Badge 
-                  className="rounded-full px-2 py-1 text-xs font-medium bg-muted/50 text-muted-foreground border-muted-foreground/20" 
-                  variant="outline"
-                  aria-label={`Version ${CURRENT_VERSION}`}
-                >
-                  {CURRENT_VERSION}
-                </Badge>
+            
               </div>
             </div>
 
