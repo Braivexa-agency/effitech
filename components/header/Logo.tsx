@@ -5,7 +5,6 @@ import Link from 'next/link';
 import { memo } from 'react';
 import { Zap } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
-import { CURRENT_VERSION } from './constants/navigation';
 import type { LogoProps } from './types';
 
 export const Logo = memo<LogoProps>(({ isScrolled, className = '' }) => (
@@ -50,15 +49,6 @@ export const Logo = memo<LogoProps>(({ isScrolled, className = '' }) => (
         </div>
       </div>
     </Link>
-    
-    {/* Version Badge */}
-    <Badge 
-      className="hidden sm:inline-flex rounded-full px-2 py-1 text-xs font-medium bg-muted/50 text-muted-foreground border-muted-foreground/20" 
-      variant="outline"
-      aria-label={`Version ${CURRENT_VERSION}`}
-    >
-      {CURRENT_VERSION}
-    </Badge>
   </div>
 ));
 
