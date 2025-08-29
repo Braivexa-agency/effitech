@@ -6,6 +6,7 @@ import { memo } from 'react';
 import { Zap } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import type { LogoProps } from './types';
+import Image from 'next/image';
 
 export const Logo = memo<LogoProps>(({ isScrolled, className = '' }) => (
   <div className={`flex items-center gap-3 ${className}`}>
@@ -23,7 +24,7 @@ export const Logo = memo<LogoProps>(({ isScrolled, className = '' }) => (
         
         {/* Logo container */}
         <div className="relative flex items-center gap-2 px-3 py-2 rounded-xl bg-gradient-to-br from-primary/10 to-secondary/5 group-hover:from-primary/20 group-hover:to-secondary/10 transition-all duration-300">
-          <div className="relative">
+          {/* <div className="relative">
             <Zap 
               className="size-6 text-primary group-hover:scale-110 transition-transform duration-300" 
               aria-hidden="true"
@@ -32,7 +33,8 @@ export const Logo = memo<LogoProps>(({ isScrolled, className = '' }) => (
               className="absolute -inset-1 bg-primary/20 rounded-full blur-sm opacity-0 group-hover:opacity-50 transition-opacity duration-300"
               aria-hidden="true"
             />
-          </div>
+          </div> */}
+          <Image src="/logo.png" alt="EFFI TECH" width={32} height={32} />
           
           <div className="flex flex-col">
             <span className={`
