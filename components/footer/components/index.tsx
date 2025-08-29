@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ArrowUp, Zap, Mail } from "lucide-react";
 import { scrollButtonVariants, hoverVariants } from "../footer-animations";
+import Image from 'next/image';
 
 // Types
 interface Contact {
@@ -53,9 +54,11 @@ export function FooterLogo({ companyName, tagline, description }: FooterLogoProp
       <div className="flex items-center gap-3">
         <div className="relative">
           <div className="absolute -inset-1 bg-gradient-to-r from-primary/40 to-secondary/40 rounded-xl blur opacity-75"></div>
-          <div className="relative size-12 rounded-xl bg-gradient-to-br from-primary to-primary/70 flex items-center justify-center text-primary-foreground text-xl font-bold shadow-lg">
+          {/* <div className="relative size-12 rounded-xl bg-gradient-to-br from-primary to-primary/70 flex items-center justify-center text-primary-foreground text-xl font-bold shadow-lg">
             <Zap className="size-6" />
-          </div>
+          </div> */}
+          <Image src="/logo.png" alt="EFFI TECH" width={32} height={32} />
+
         </div>
         <div className="flex items-center gap-2">
           <div>
